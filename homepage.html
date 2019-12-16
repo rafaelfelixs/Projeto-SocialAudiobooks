@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<header>
+    <div class="header">
+        <img class="header_img" src="imagens/logo06.png">
+        <h1 class="header_title">Social Audiobooks</h1>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a onclick="onLinkClick()">Sobre</a></li>
+                <li><a href="loginpage.html">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<body>
+    <div class="initial">
+        <h1>Social Audiobooks</h1>
+        <h2>Explore narrações — publique audiobooks</h2>
+        <button class="initial_bttn"><a href="loginpage.html">Experimente agora</a></button>
+    </div>
+    <div class="intro">
+        <img class="intro_img" src="imagens/imagem02.jpg" alt="Ouvindo Audiobook">
+        <div class="intro_text">
+            <h1>Uma nova maneira de apreciar audiobook surgiu</h1>
+            <h2>
+                Com o Social Audiobooks você não somente pode desfrutar de uma boa narração,
+                mas pode escolher qual narração lhe agrada mais
+            </h2>
+        </div>
+    </div>
+    <div class="examples">
+        <div class="examples_text">
+            <h1> Conheça novos narradores sempre que você quiser! </h1>
+            <h2> Se torne seguidor deles, busque e peças novos livros</h2>
+        </div>
+        <div class="exemples_narrators">
+            <img class="narrator1" src="imagens/narrador1.jpg">
+            <img class="narrator2" src="imagens/narrador2.jpg">
+            <img class="narrator3 " src="imagens/narrador3.jpg">
+        </div>
+        <div class="examples_names">
+            <ul>
+                <li>Kevin Johnson</li>
+                <li>Jackie Miller</li>
+                <li>Beth Wilson</li>
+            </ul>
+        </div>
+    </div>
+    <div class="sobre">
+        <img class="sobre_img" src="imagens/audiobook02.png">
+        <div class="sobre_text">
+            <h1>Uma plataforma online para os amantes do livro em aúdio</h1>
+            <h2>Social Audibooks reune o convívio de uma rede social
+                com uma plataforma única de conteúdo. Curtir, Compartilhar,
+                Recomendar, Sugerir tudo isso junto com uma experiência
+                prazerosa e agradável de adquirir e consumir audiobooks.
+            </h2>
+            <h2> Confira abaixo sucessos consagrados na plataforma</h2>
+        </div>
+        <div class="slide">
+            <section class="gallery-container">
+                <!--Slide-->
+                <div class="mySlides fade">
+                    <!-- 01 -->
+                    <div class="numbertext">01 / 05</div>
+                    <img class="imgslide" src="imagens/livro01.jpg" alt="Game of Thrones" />
+                    <div class="text">Game of Thrones</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <!-- 02 -->
+                    <div class="numbertext">02 / 05</div>
+                    <img class="imgslide" src="imagens/livro02.jpg" alt="The Lord of the Rings" />
+                    <div class="text">The Lord of the Rings</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <!-- 03 -->
+                    <div class="numbertext">03 / 05</div>
+                    <img class="imgslide" src="imagens/livro04.jpg" alt="The Hobbit" />
+                    <div class="text">The Hobbit</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <!-- 04 -->
+                    <div class="numbertext">04 / 05</div>
+                    <img class="imgslide" src="imagens/livro05.jpg" alt="The Chronicles of Narnia" />
+                    <div class="text">The Chronicles of Narnia</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <!-- 05 -->
+                    <div class="numbertext">05 / 05</div>
+                    <img class="imgslide" src="imagens/livro06.jpg" alt="How to win friends & influence people" />
+                    <div class="text">How to win friends & influence people</div>
+                </div>
+                <!--Final Slides-->
+                <!--Navigation-->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </section>
+            <!--End of galery-->
+        </div>
+    </div>
+    <div class="opnioes01">
+        <img class="opnioes_img1" src="imagens/imagem03.jpg">
+        <div class="opnioes_text1">
+            <h2>"Curto demais as narrações do Kevin. Todo dia na volta do trabalho
+                ponho alguma narração dele para escutar" Bryan Smith, New York.
+            </h2>
+        </div>
+    </div>
+    <div class="opnioes02">
+        <img class="opnioes_img2" src="imagens/imagem04.jpg">
+        <div class="opnioes_text2">
+            <h2> "Para mim, a Beth é a melhor. Quando escuto algum audiobook
+                com ela me sinto leve e com vontade de nunca parar" Alice Williams,
+                Chicago.
+            </h2>
+        </div>
+    </div>
+
+    <div class="footer_container">
+        <footer>
+            Copyright © 2019 Social Audibooks Team
+        </footer>
+    </div>
+</body>
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+    }
+    function login() {
+        location.href = "loginpage.html";
+    }
+    function onLinkClick() {
+        document.getElementsByTagName('h1')[4].scrollIntoView();
+        // will scroll to 4th h3 element
+    }
+</script>
+
+</html>
